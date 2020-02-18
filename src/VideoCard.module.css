@@ -1,0 +1,19 @@
+.wrap{
+    width: 30%;
+    height: 20vh;
+    /* background-color: aqua; */
+    box-shadow: 4px 5px lightgray;
+    margin: 200px;
+    border: 1px rgba(240, 237, 237);
+}
+
+
+.wrap > h3{
+    text-align: center;
+    margin: 0;
+}
+
+.wrap > img{
+    width: 100px;
+    height: 50px;
+}
