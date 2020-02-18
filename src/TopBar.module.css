@@ -7,3 +7,9 @@
     background-color: black;
     z-index: 1;
 }
+
+.topBar > img{
+    height: 60%;
+    padding-left: 50%;
+    padding-top: 2vh;
+}

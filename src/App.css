@@ -1,6 +1,7 @@
 .pageWrap{
     display: flex;
-    padding-top: 6vh;
+    padding-top: 10vh;
+    font-family: 'Roboto', sans-serif;
 }
 
 .mainDisplay{
@@ -11,7 +12,7 @@
 
 
 .display{
-    height: 100%;
+    height: 80%;
 }
 
 
@@ -21,7 +22,7 @@
     color: red;
     position: absolute;
     left: 45%;
-    top: 40%;
+    top: 33%;
     font-size: 60px;
     animation-name: pulse;
     animation-duration: 1s;
@@ -45,8 +46,8 @@
 
 .heartRate{
     position: absolute;
-    top: 50%;
-    left: 47%;
+    top: 40%;
+    left: 48%;
     color: white;
     font-size: 25px;
     display: none;
@@ -54,7 +55,7 @@
 
 .time{
     position: absolute;
-    top: 45%;
+    top: 33%;
     left: 38%;
     color: white;
     font-size: 30px;

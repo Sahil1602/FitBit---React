@@ -7,7 +7,7 @@ class App extends React.Component{
 
   state = {
     api: 'https://i.imgur.com/kGKURRz.png',
-    d: new Date(),
+    time: '',
     heartDisplay: 'none',
     timeDisplay: 'none'
   }
@@ -49,6 +49,21 @@ class App extends React.Component{
     })
   }
   
+  gettingTime = setInterval(() => {
+    let hours = new Date().getHours();
+    let minutes = new Date().getMinutes();
+    let seconds = new Date().getSeconds();
+    if(hours < 10){
+        hours = "0" + hours;
+    }
+    if(minutes < 10){
+        minutes = "0" + minutes;
+    }
+    if(seconds < 10){
+        seconds= "0" + seconds;
+    }
+    this.setState({time: hours +":" + minutes + ":" + seconds})
+}, 1000);
 
   render(){
     
@@ -61,7 +76,7 @@ class App extends React.Component{
           <img className="display" src= {this.state.api} />
           <i class="fas fa-heartbeat" id="heartBeat" style={{display: this.state.heartDisplay}}></i>
           <p className="heartRate" style={{display: this.state.heartDisplay}}>79</p>
-          <p className="time" style={{display: this.state.timeDisplay}}>{this.state.d.getHours()}  :  {this.state.d.getMinutes()}  : {this.state.d.getSeconds()}</p>
+          <p className="time" style={{display: this.state.timeDisplay}}>{this.state.time}</p>
         </div>
         <div className="details">
           <h1 className="heading">FitBit 20 - The Smartest Watch</h1>
